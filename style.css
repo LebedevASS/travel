@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;/*что бы параметры не плюсовались (Padding+width = увеличение за счет соседней секции)*/
+}
+body {
+    margin: 0px;/* убираем внешние отступы*/
+}
+.container {
+    width: 1140px;
+    margin: auto;/* при указании ширины будет по центру*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.logo-tel {
+    display: flex;
+    justify-content: space-between;/* крайние елементы прижимаюся к краям*/
+    height: 97px;
+    align-items: center;/* выравнивание по центру по вертикальной оси*/
+    font-size: 14px;
+    border-bottom: 1px solid #7A7A7A;/* линия*/
+}
+.logo {
+    display: flex;
+    column-gap: 23px;
+    color: #434A5C;
+}
+.tel {
+    color: #484848;
+    display: flex;
+    column-gap: 18px;/* расстояние между элементами*/
+    font-weight: 500;/*толщина шрифта*/
+}
+.tel a {
+    color: #576698;
+    text-transform: uppercase;/*верхний регистр*/
+}
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 66px;
+    align-items: center;   
+    margin-bottom: 12px;
+}
+.top-menu {
+    display: flex;
+    list-style-type: none;/*убирает маркированный список*/
+    padding-left: 0;/*зануляет внутренний отступ слева*/
+    column-gap: 18px;/*расстояние между пунктами (меню)*/
+}
+.top-menu a {
+    text-decoration: none;/*убирает подчеркивание у ссылок*/
+    color: #7A7A7A;
+}
+h1 {
+    border-top: 1px solid #7A7A7A;
+    padding-top: 27px;
+    margin-top: 25px;
+    margin-bottom: 32px;
+    color: #141414;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 600;
+}
+h2 {
+    color: #BF6024;
+    font-size: 28px;
+    font-weight: 600;
+}
+h3 {
+    color: #141414;
+    font-size: 24px;
+    font-weight: 600;
+}
+.fun {
+    display: grid;
+    grid: auto / repeat(2, 1fr); /*2колонки по 1 фракции */
+    grid-row-gap: 72px;
+    grid-column-gap: 28px;
+    margin-bottom: 67px; 
+    padding-bottom: 92px; 
+    border-bottom: 1px solid #7A7A7A;
+}
+.fun-item {
+    margin: 0;
+    color: #141414;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.living {
+    display: grid;/*двумерная сетка, родитель*/
+    grid-template-areas:/*как таблица*/
+      'foto-apartaments select-hotel'
+      'foto-apartaments loyalty-program';
+    grid-template-columns: 555px 1fr;
+    grid-gap: 30px;
+    margin-bottom: 42px;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #7A7A7A;
+    font-size: 14px;
+}
+
+.foto-apartaments {
+    position: relative;
+    background-image: url(images/foto-apartaments.jpg);
+    background-size: cover; /* Масштабирует изображение по высоте и ширине блока, обрезает */
+    /* background-size: contain; / картинка целиком 
+    /* background-repeat: no-repeat; */
+    height: 600px;
+    width: 555px;
+    grid-area: foto-apartaments;/*задаю значение для grid*/
+}
+.overlay {
+    position: absolute;
+    left: 7%;/*относительно родителя foto-apartaments*/
+    bottom: 8%;
+    
+}
+.overlay h3 {
+    color: #FFFFFF;
+}
+.select-hotel {
+    width: 300px;
+    height: 285px;
+    grid-area: select-hotel;
+    position: relative;
+     /* padding-top: 60px; */
+}
+.loyalty-program {
+    width: 350px;
+    height: 285px;
+    grid-area: loyalty-program;
+    position: relative;
+    /* background: #EAEDF2; */
+    /* padding-top: 41px; */
+    /* padding-left: 73px; - ухожу от паддингов, делаю position: relative; */
+}
+.position-absolute {
+    position: absolute;
+    top: 10%;/*относительно родителей select-hotel и loyalty-program*/
+    left: 20%;
+}
+/* Общие свойства для кнопок-ссылок */
+.btn a {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 5px 13px;
+    margin-right: 13px;
+}
+/* Различающиеся свойства для кнопок-ссылок */
+.btn-orange {
+    color: #E5C6B2;
+    background-color:#BF6024;
+    
+}
+.btn-white {
+    color:#BF6024;
+    border: 1px solid #BF6024;
+
+}
+.btn-clear {
+    color: #E5C6B2;
+    border: 1px solid #E5C6B2;
+}
+footer {
+    /* display: grid; */
+    /* grid: auto / repeat(3, 1fr); - как альтернатива fleх*/
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    font-size: 14px;
+    color: #424242;
+}
+.grey-bold {
+    font-weight: 600;
+    color: #424242;
+}
+.a-grey {
+    text-decoration: none;
+    color: #424242; /* ссылка серого цвета на Политику конфиденциальности*/
+}
+.footer {
+    width: 300px; /* если использовать grid, то это свойство не нужно*/
+}

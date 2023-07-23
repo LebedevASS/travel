@@ -1,0 +1,125 @@
+<!DOCTYPE html> <!--Комментирование- Ctrl/, Быстрый вывод- Shift! -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синий луг</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"><!--заворачиваю в container в 3-х местах шапку (в т.ч. меню), тело и футер-->
+        <header>
+            <div class="logo-tel">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <span class="slogan"><br>твой лучший курорт</span>
+                </div>
+                <div class="tel">
+                    <a href="#">Обратная связь</a>
+                    <span>8 800 770 30 30</span>
+                </div>
+            </div>
+            <!-- Навигация главное меню -->
+            <nav class="main-menu">
+                <ul class="top-menu"> <!-- Маркированный список, быстрый вывод: ul>li*5>a tab-enter -->
+                    <li class="menu-item"><a href="#">Курорт</a></li>
+                    <li class="menu-item"><a href="#">Чем заняться</a></li>
+                    <li class="menu-item"><a href="#">Купить онлайн</a></li>
+                    <li class="menu-item"><a href="#">Афиша мероприятий</a></li>
+                    <li class="menu-item"><a href="#">Проживание</a></li>
+                </ul>
+                <ul class="top-menu">
+                    <li class="menu-item"><a href="#">Программа лояльности</a></li>
+                    <li class="menu-item"><a href="#">Для бизнеса</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <!-- Баннер -->
+        <div class="banner">
+            <img src="images/beautiful-mountain.jpg" alt="beautiful-mountain">
+        </div>
+        <h1>Отдыхай на курорте синий луг</h1>
+        <h2>Развлечения</h2>
+        <!-- Секция развлечения -->
+        <section class="fun">
+            <!-- блоки картинок с подписями -->
+            <figure class="fun-item">
+                <img src="images/snowboard.jpg" alt="snowboard">
+                <figcaption class="fun-sign">Спортивные развлечения</figcaption>
+            </figure>
+            <figure class="fun-item">
+                <img src="images/cafe.jpg" alt="cafe">
+                <figcaption class="fun-sign">Развлекательные мероприятия</figcaption>
+            </figure>
+            <figure class="fun-item">
+                <img src="images/mountains.jpg" alt="mountains">
+                <figcaption class="fun-sign">Пешие туры</figcaption>
+            </figure>
+            <figure class="fun-item">
+                <img src="images/spa.jpg">
+                <figcaption class="fun-sign" alt="spa">Спа</figcaption>
+            </figure>
+        </section>
+        <h2>Проживание на курорте</h2>
+        <!-- Секция Проживание -->
+        <section class="living">
+            <div class="foto-apartaments"><!--Фото апартаментов как background-image, position: relative; - родитель-->
+                <div class="overlay"><!--наложение элементов, position: absolute; относительно родителя-->
+                    <h3>Апартаменты люкс</h3>
+                    <div class="btn">
+                        <a class="btn-orange" href="#">Забронировать</a>
+                        <a class="btn-clear" href="#">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <!--контейнер подобрать отель-->
+            <div class="select-hotel">
+                <div class="position-absolute">
+                    <h3>Подберите отель по выгодной цене</h3>
+                    <div class="btn">
+                        <a class="btn-white" href="#">Подобрать &nbsp; <img src="images/Arrow.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <!--контейнер программа лояльности-->
+            <div class="loyalty-program">
+                <div class="position-absolute">
+                <h3>Программа лояльности</h3>
+                    <p>
+                        Покупайте услуги курорта со скидкой до 20% и получите до 300 баллов за регистрацию! 
+                    </p>
+                    <br>
+                    <div class="btn">
+                        <a class="btn-orange" href="#">Участвовать</a>
+                        <a class="btn-white" href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>    
+        </section>
+    </div>
+    <div class="container">
+        <footer>
+            <div class="footer">
+                <p class="grey-bold">2001-2020 Синий луг</p>
+                <p>Официальный сайт Курорта Синий Луг</p>
+                <a class="a-grey" href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer">
+                <a class="grey-bold" href="#"><br>Обратная связь</a>
+                <p>
+                    Россия, <br>
+                    Москва, 113337, ул. Советская, д. 42
+                </p>
+            </div>
+            <div class="footer">
+                <p>
+                    Указанные на сайте цены не являются публичной офертой (ст. 435 ГК РФ). Стоимость и возможность предоставления услуг необходимо уточнять в кассах
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
